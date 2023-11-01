@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update Profile</title>
+    <style>
+        #image{
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Update Profile Picture</h1>
+    <input type="file" name="image" id="upload">
+    <h3> Your Profile Picture </h3>
+    <img  alt="No Profile Picture" id="image">
+
+    <script>
+        let btn = document.querySelector("#upload")
+        // upload data in js
+        btn.onchange = function (){
+            let reader = new FileReader()
+            reader.readAsDataURL(btn.files[0]) // data store in files[0]
+                
+            // load on browser
+                reader.onload =function(){
+                    let fileName = reader.result
+                    let img = document.querySelector("#image")
+                    img.src = fileName;
+                }
+                
+        }
+    </script>
+</body>
+</html>
