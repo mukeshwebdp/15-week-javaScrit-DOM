@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        button{
+            margin-top: 18px;
+            font-size: 18px;
+            border-radius: 10px;
+            height: 8vh;
+        }
+        h3{
+            font-size: 30px;
+            color: red;
+        }
+        button:hover{
+            background-color: darkorange;
+        }
+    </style>
+    <title>counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="container">
+        <button id="incriment">Incriment</button>
+    <h3>0</h3>
+    <button id="decriment">Decriment</button>
+    </div>
+
+    <script>
+        let mainText =document.querySelector("h3")
+        const btnIncriment = document.querySelector("#incriment")
+        const btnDecriment = document.querySelector("#decriment")
+        let count = 0
+            
+        // Inceriment event
+        btnIncriment.addEventListener("click", ()=>{
+            count++
+            mainText.innerText = count
+            
+        })
+        //decriment event
+        btnDecriment.addEventListener("click", ()=>{
+            if(count > 0){
+                count--
+                mainText.innerText = count
+            }else{
+                alert("Counter is going beyond 0.")
+            }
+        })
+        
+    </script>
+</body>
+</html>
