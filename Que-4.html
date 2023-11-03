@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        .container{
+            width: 300px;
+            margin: auto;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            margin-top: 10px;
+        }
+    </style>
+    <title>Form</title>
+</head>
+<body>
+    <div class="container">
+        
+        <form onsubmit="validateForm(event)">
+            <h1>Sign Up Form</h1>
+            <label for="name">Name: </label>
+        <input type="text" name="Name" id="name" placeholder=" (Minimum 3 characters) "><br>
+        <label for="email">Email: </label>
+        <input type="email" name="Email" id="email" placeholder="Enter Your Email"><br>
+        <label for="password">Password: </label>
+        <input type="password" name="Password" id="password" placeholder=" (Minimum 8 characters) "><br>
+        <button>Submit</button>
+        </form>
+        <script>
+            function validateForm(event){
+                event.preventDefault()
+                console.log("enter");
+                const name = document.getElementById("name");
+                const password = document.getElementById("password");
+                const email = document.getElementById("email");
+                
+                if(name.value.length >=3 && password.value.length >= 8){
+                    alert("Form Validation successful.")
+                }else{
+                    alert("Form Validation failed.")
+                }
+
+            }
+        </script>
+
+    </div>
+</body>
+</html>
