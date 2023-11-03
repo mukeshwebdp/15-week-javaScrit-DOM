@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>image toggle</title>
+</head>
+<body>
+    <h1>Your Image is visible</h1>
+    <button>Toggle image</button><br><br>
+    <img src="https://cdn.pwskills.com/assets/uploads/thumbnails/64af76666977cc11e7e4086e.png" alt="pwskills">
+    <script>
+        let text = document.querySelector("h1")
+        let btn = document.querySelector("button")
+        let image = document.querySelector("img")
+        btn.addEventListener("click", event)
+        
+        function event(){
+            let display= image.style.opacity 
+            if(display == 0){
+                text.innerText = "Your Image is visible"
+                image.style.opacity = 100
+
+            }else{
+                text.innerText = "Your Image is hidden"
+                image.style.opacity =0
+            }
+        }
+    </script>
+</body>
+</html>
