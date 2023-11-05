@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM option</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    
+    
+    <script>
+        let language = ['Java','C++','HTML','CSS','javaScript','C#']
+        const div = document.createElement('div')
+            div.className ="container"
+        const text = document.createElement('h3')
+            text.innerText ="Which is favorite Programming Language: "
+            // create option
+            const selector = document.createElement('select')
+            language.map((data) => {
+                const Soption = document.createElement('option')
+                Soption.innerText = data
+                Soption.value = data
+                selector.appendChild(Soption)
+            })
+            div.appendChild(text)
+            div.appendChild(selector)
+                document.body.appendChild(div)
+                
+    </script>
+</body>
+</html>
