@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dark{
+            background-color: black;
+            color: aliceblue;
+        }
+        .light{
+            background-color: #fff;
+            color: black;
+        }
+    </style>
+    <title>Apply dark mode</title>
+</head>
+<body class="" >
+    <h1>this is Light Mode</h1>
+    <button onclick="name1()">toggle theme</button>
+    <script>
+            
+        function name1(){
+            let btn = document.querySelector('button')
+            let body = document.querySelector('body')
+            let heading = document.querySelector('h1')
+                heading.innerText ="this is Dark Mode"
+            body.classList.toggle('dark')
+        }
+    </script>
+</body>
+</html>
