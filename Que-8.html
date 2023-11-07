@@ -44,6 +44,12 @@
         let hours = date.getHours()
         let minutes = date.getMinutes()
         let second = date.getSeconds()
+        if(minutes < 10){
+            minutes = `0${minutes}`
+        }
+        if(second < 10){
+            second = `0${second}`
+        }
         time.textContent = `${hours} : ${minutes} : ${second}`
         })
     </script>
