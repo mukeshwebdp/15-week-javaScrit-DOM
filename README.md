@@ -13,3 +13,7 @@
 # Que 6: Your task is to use JS DOM to create a heading element and a dropdown element. You have an array of options, and you need to loop through them, adding each option as a dropdown item. Below are the reference images.
 
 # Que 7: You are tasked to create an input field and a list of items. As the user types in the input field, dynamically filter the list to show only items that match the input. Making sure the list updates in real-time as the user types.
+
+# Que 8: Your task is to create a webpage that displays the time in hours, minutes, and seconds in the center of the screen. Formate the time to have 2 digits for hours, minutes, and seconds, and seconds, and use the time's valures to assign a hex code to the background. The timer's values to assign a hex code to the background. The timer should update in real-time wihtout any user interaction. For Example: if the time is 12:10:50 the background color of the webpage will have the hex code "#121050"
+
+# Que 9: Your task is to create a simple webpage with two buttons: "Login" and "Logout". When the "Login" button is clicked, the user's authentication staus should be stored in local Storage. When the "Logout" button is clicked, the authentication status should be removed form localStorage. Additionally, display a heading below the buttons to indicate whether the user is logged in or not.
